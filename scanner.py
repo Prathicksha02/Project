@@ -17,8 +17,8 @@ def scan(url):
             if input["name"]:
                 data[input["name"]] = xss_payload + sqli_payload
 
-        
         target_url = urljoin(url, details["action"])
+
         print(f"\n[🔎] Scanning form: {target_url}")
         print(f"[📨] Payload sent: {data}")
 
@@ -44,3 +44,4 @@ def scan(url):
 if __name__ == "__main__":
     url = input("Enter URL to scan: ")
     scan(url)
+ 
